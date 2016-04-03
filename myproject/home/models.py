@@ -7,9 +7,10 @@ from django.utils import timezone
 # Create your models here.
 class Order(models.Model):
     user = models.ForeignKey('auth.User')
+    name = models.TextField()
     purpose = models.TextField()
     period = models.TextField()
     schedule = models.TextField()
     email = models.TextField()
     created_date = models.DateTimeField(default=timezone.now)
-    is_complete = models.BooleanField()
+    is_complete = models.BooleanField(default=False)

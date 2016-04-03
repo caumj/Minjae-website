@@ -45,7 +45,7 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="/">Jajupul</a>
+              <a class="navbar-brand" href="/">JAJUPOOL</a>
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
@@ -55,6 +55,9 @@
                     <a href="/about/">어바웃</a>
                 </li>
                 {% if request.user.is_authenticated %}
+                <li>
+                    <a href="/order/">오더하기</a>
+                </li>
                 <li>
                     <a href="/user/">내 페이지</a>
                 </li>
@@ -69,7 +72,7 @@
                     <a href="/signup/">회원가입</a>
                 </li>
                 {% endif %}
-                
+
               </ul>
           </div>
           <!-- /.navbar-collapse -->

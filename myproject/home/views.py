@@ -64,17 +64,20 @@ def signup(request):
     return render(request, "signup.html", { "error": error })
 
 def order(request):
+    if request.user.is_authenticated() is False:
+        return redirect('signin')
     if request.method == "POST":
         order = Order(
           user=request.user,
-          name=request.POST.get("name")
-          purpose=request.POST.get("purpose")
-          period=request.POST.get("period")
-          schedule=request.POST.get("schedule")
+          name=request.POST.get("name"),
+          purpose=request.POST.get("purpose"),
+          period=request.POST.get("period"),
+          schedule=request.POST.get("schedule"),
           email=request.POST.get("email"))
         order.save()
         return redirect('user')
     return render(request, "order.html")
+
 
 
 def user(request):
