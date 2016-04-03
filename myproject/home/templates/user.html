@@ -9,6 +9,8 @@
 <div class="user">
   <div class="container">
     <h1>내 페이지</h1>
+    <p>{{ request.user.username }}</p>
+    <p>{{ request.user.email }}<p>
   </div>
 </div>
 {% endblock %}

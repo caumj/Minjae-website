@@ -9,9 +9,13 @@ from .models import Order
 
 # Create your views here.
 def index(request):
+    print request.user
     return render(request, "index.html")
 
 def signin(request):
+    if request.user.is_authenticated() is True:
+        return redirect('user')
+
     error = None
     if request.method == "POST":
         username = request.POST.get("username")
@@ -60,10 +64,25 @@ def signup(request):
     return render(request, "signup.html", { "error": error })
 
 def order(request):
+    if request.method == "POST":
+        order = Order(
+          user=request.user,
+          name=request.POST.get("name")
+          purpose=request.POST.get("purpose")
+          period=request.POST.get("period")
+          schedule=request.POST.get("schedule")
+          email=request.POST.get("email"))
+        order.save()
+        return redirect('user')
     return render(request, "order.html")
 
-def user(request):
-    return render(request, "user.html")
 
-def logout(request):
+def user(request):
+    if request.user.is_authenticated() is False:
+        return redirect('signin')
+    if request.user.is_authenticated() is True:
+        return render(request, "user.html")
+
+def signout(request):
     logout(request)
+    return redirect('index')

@@ -19,11 +19,16 @@
         <p>4. 만약 스케줄을 잘못 입력하신 경우에는 위의 수정 기간에 맞춰 수정 요청을 해주시면 됩니다. 수정 기간이 끝난 뒤의 요청은 받지 않으니 신중하게 적어주세요.</p>
       </div>
       <div class="col-md-6">
-        <input type="text" class="form-control" placeholder="주문자명">
-        <input type="text" class="form-control" placeholder="사용하실 용도(시험계획 등)">
-        <input type="text" class="form-control" placeholder="계획 실천 기간">
-        <textarea class="form-control" rows="3" placeholder="기간 내 자신의 스케줄(시간, 요일 구체적으로)"></textarea>
-        <a class="btn" href="#">ORDER</a>
+        <h3>오더 폼</h3>
+        <form class="form-horizontal" method="post">
+          {% csrf_token %}
+          <input name="name" type="text" class="form-control" placeholder="주문자명" required>
+          <input name="purpose" type="text" class="form-control" placeholder="사용하실 용도(시험계획 등)">
+          <input name="period" type="text" class="form-control" placeholder="계획 실천 기간">
+          <textarea class="form-control" name="schedule" rows="3" placeholder="기간 내 자신의 스케줄(시간, 요일 구체적으로)"></textarea>
+          <input type="text" name="email" class="form-control" placeholder="연락 가능한 이메일">
+          <input type="submit" class="btn" href="#">ORDER</input>
+        </form>
       </div>
     </div>
   </div>
