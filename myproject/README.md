@@ -1,43 +1,24 @@
-# Heroku Django Starter Template
+# 민재의 시간표 만들어주는 웹사이트 프로젝트
 
-An utterly fantastic project starter template for Django 1.9.
+## 가이드
 
-## Features
+* [히로쿠/장고로 새롭게 프로젝트를 시작하는 방법](/docs/heroku-django-start-guide.md)
+* [장고로 프로젝트를 시작하는 방법](/docs/django-start-guide.md)
+* [히로쿠로 출시하는 방법](/docs/heroku-deploy-guide.md)
 
-- Production-ready configuration for Static Files, Database Settings, Gunicorn, etc.
-- Enhancements to Django's static file serving functionality via WhiteNoise
+## 참고자료
 
-## How to Use
+- [부트스트랩](http://bootstrapk.com/)
 
-To use this project, follow these steps:
+## 3주 완성 마일스톤
 
-1. Create your working environment.
-2. Install Django (`$ pip install django`)
-3. Create a new project using this template
+민재의 웹사이트는 정보를 보여주고 회원가입을 하고 데이터를 올리는 웹사이트입니다. 사이트에는 다음과 같은 페이지들이 있습니다.
+- 랜딩페이지: 서비스 이름과 간단한 소개가 있는 페이지
+- 회원가입 페이지: 회원가입을 할 수 있는 페이지
+- 로그인 페이지: 로그인을 할 수 있는 페이지
+- 사용방법/주문 페이지: 주문을 할 수 있는 페이지
+- 유저 페이지: 유저의 주문 내역을 볼 수 있는 페이지
+- 소개 페이지: 민재의 개인 소개가 들어간 페이지
 
-## Creating Your Project
-
-Using this template to create a new Django app is easy::
-
-    $ django-admin.py startproject --template=https://github.com/heroku/heroku-django-template/archive/master.zip --name=Procfile helloworld
-
-You can replace ``helloworld`` with your desired project name.
-
-## Deployment to Heroku
-
-    $ git init
-    $ git add -A
-    $ git commit -m "Initial commit"
-
-    $ heroku create
-    $ git push heroku master
-
-    $ heroku run python manage.py migrate
-
-See also, a [ready-made application](https://github.com/heroku/python-getting-started), ready to deploy.
-
-## Further Reading
-
-- [Gunicorn](https://warehouse.python.org/project/gunicorn/)
-- [WhiteNoise](https://warehouse.python.org/project/whitenoise/)
-- [dj-database-url](https://warehouse.python.org/project/dj-database-url/)
+- [1주 마일스톤](/milestones/week1.md)
+- [2주 마일스톤](/milestones/week2.md)
