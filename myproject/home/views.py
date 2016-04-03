@@ -2,13 +2,29 @@
 from django.shortcuts import render
 from django.shortcuts import redirect
 from django.contrib.auth.models import User
+from django.contrib.auth import authenticate
+from django.contrib.auth import login
+from django.contrib.auth import logout
+from .models import Order
 
 # Create your views here.
 def index(request):
     return render(request, "index.html")
 
 def signin(request):
-    return render(request, "signin.html")
+    error = None
+    if request.method == "POST":
+        username = request.POST.get("username")
+        password = request.POST.get("password")
+        user = authenticate(username=username, password=password)
+        if user is not None:
+            login(request, user)
+            return redirect('user')
+        else:
+            error = "유저네임과 비밀번호가 일치하지 않습니다."
+    return render(request, "signin.html", { "error": error })
+
+
 
 def about(request):
     return render(request, "about.html")
@@ -48,3 +64,6 @@ def order(request):
 
 def user(request):
     return render(request, "user.html")
+
+def logout(request):
+    logout(request)
