@@ -81,3 +81,6 @@ class Order(models.Model):
 ```
 
 - 자 이제 `order.html`에서 list-group-item 안에 있는 span에 display inline-block과 width를 %로 적용해서 좀 정리되게 보여드립니다.
+
+## 마음껏 꾸미기
+이제 까지 배워본 css를 이용해서 최소 **3가지** 이상의 디자인 변경을 해주세요. 이미지를 넣든 사진을 넣든 지금 너무 심심해 보이니 좀 더 예쁘게 만들어봅시다.
