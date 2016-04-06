@@ -2,9 +2,9 @@
 
 ## 가이드
 
-* [히로쿠/장고로 새롭게 프로젝트를 시작하는 방법](/docs/heroku-django-start-guide.md)
-* [장고로 프로젝트를 시작하는 방법](/docs/django-start-guide.md)
-* [히로쿠로 출시하는 방법](/docs/heroku-deploy-guide.md)
+* [히로쿠/장고로 새롭게 프로젝트를 시작하는 방법](/myproject/docs/heroku-django-start-guide.md)
+* [장고로 프로젝트를 시작하는 방법](/myproject/docs/django-start-guide.md)
+* [히로쿠로 출시하는 방법](/myproject/docs/heroku-deploy-guide.md)
 
 ## 참고자료
 
@@ -20,5 +20,6 @@
 - 유저 페이지: 유저의 주문 내역을 볼 수 있는 페이지
 - 소개 페이지: 민재의 개인 소개가 들어간 페이지
 
-- [1주 마일스톤](/milestones/week1.md)
-- [2주 마일스톤](/milestones/week2.md)
+- [1주 마일스톤](/myproject/milestones/week1.md)
+- [2주 마일스톤](/myproject/milestones/week2.md)
+- [3주 마일스톤](/myproject/milestones/week3.md)

@@ -7,9 +7,7 @@ from django.contrib.auth import login
 from django.contrib.auth import logout
 from .models import Order
 
-# Create your views here.
 def index(request):
-    print request.user
     return render(request, "index.html")
 
 def signin(request):
@@ -27,8 +25,6 @@ def signin(request):
         else:
             error = "유저네임과 비밀번호가 일치하지 않습니다."
     return render(request, "signin.html", { "error": error })
-
-
 
 def about(request):
     return render(request, "about.html")
@@ -60,6 +56,7 @@ def signup(request):
             # Sign up user
             user = User.objects.create_user(username, email, password)
             user.save()
+            login(request, user)
             return redirect('user')
     return render(request, "signup.html", { "error": error })
 
@@ -77,8 +74,6 @@ def order(request):
         order.save()
         return redirect('user')
     return render(request, "order.html")
-
-
 
 def user(request):
     if request.user.is_authenticated() is False:
