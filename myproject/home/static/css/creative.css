@@ -46,12 +46,12 @@ p {
 }
 
 .bg-primary {
-    background-color: #f05f40;
+    background-color: #8e0073;
 }
 
 .bg-dark {
     color: #fff;
-    background-color: #222;
+    background-color: #8e0073;
 }
 
 .text-faded {
@@ -84,12 +84,12 @@ aside {
     text-transform: uppercase;
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
     font-weight: 700;
-    color: #f05f40;
+    color: #8e0073;
 }
 
 .navbar-default .navbar-header .navbar-brand:hover,
 .navbar-default .navbar-header .navbar-brand:focus {
-    color: #eb3812;
+    color: #8e0073;
 }
 
 .navbar-default .nav > li>a,
@@ -119,18 +119,18 @@ aside {
 @media(min-width:768px) {
     .navbar-default {
         border-color: rgba(34,34,34,.05);
-        background-color: #fff;
+        background-color: white;
         margin-bottom: 0px;
     }
 
     .navbar-default .navbar-header .navbar-brand {
         font-size: 14px;
-        color: #f05f40;
+        color: #8e0073;
     }
 
     .navbar-default .navbar-header .navbar-brand:hover,
     .navbar-default .navbar-header .navbar-brand:focus {
-        color: #eb3812;
+        color: #8e0073;
     }
 
     .navbar-default .nav > li>a,
@@ -150,7 +150,7 @@ header {
     min-height: auto;
     text-align: center;
     color: #fff;
-    background-image: url(../img/header.jpg);
+    background-image: url(../img/pexels-photo-58457.jpeg);
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -209,7 +209,10 @@ header .header-content .header-content-inner p {
         max-width: 80%;
         font-size: 18px;
     }
-}
+
+    header .header-content .header-content-inner a {
+      background-color: #8e0073;
+    }
 
 .section-heading {
     margin-top: 0;

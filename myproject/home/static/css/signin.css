@@ -1,0 +1,13 @@
+
+form {
+  padding-top: 20px;
+}
+
+.btn {
+  color: white;
+  background-color: #8e0073;
+}
+
+p.error {
+  color: #8e0073;
+}
