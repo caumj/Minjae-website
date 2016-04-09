@@ -9,8 +9,8 @@
 <div class="user">
   <div class="container">
     <h3>내 페이지</h3>
-    <p>{{ request.user.username }}유저네임</p>
-    <p>{{ request.user.email }}이메일<p>
+    <p>유저네임 {{ request.user.username }}</p>
+    <p>이메일 {{ request.user.email }}<p>
     <ul class="list-group">
      {% for order in orders %}
       <li class="list-group-item">
@@ -24,7 +24,6 @@
       <span class="period">{{ order.period }}</span>
       <span class="schedule">{{ order.schedule }}</span>
       <span class="email">{{ order.email }}</span>
-
     </li>
   </div>
 </div>
