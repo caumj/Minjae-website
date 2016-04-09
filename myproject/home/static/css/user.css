@@ -1,0 +1,26 @@
+.list-group .list-group-item span {
+  min-height: 1px;
+  display: inline-block;
+  float: left;
+}
+
+
+.list-group .list-group-item .purpose {
+  width: 45%;
+}
+
+.list-group .list-group-item .period {
+  width: 20%;
+}
+
+.list-group .list-group-item .email {
+  width: 20%;
+}
+
+.list-group .list-group-item .time {
+  width: 10%;
+}
+
+.list-group .list-group-item .status {
+  width: 5%;
+}

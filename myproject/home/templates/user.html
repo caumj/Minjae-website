@@ -11,20 +11,28 @@
     <h3>내 페이지</h3>
     <p>유저네임 {{ request.user.username }}</p>
     <p>이메일 {{ request.user.email }}<p>
+    <h3>주문 내역</h3>
+    {% if orders|length == 0 %}
+    <p>아직 주문 내역이 없습니다.</p>
+    {% else %}
     <ul class="list-group">
-     {% for order in orders %}
-      <li class="list-group-item">
-        {{ order.purpose }}
+      {% for order in orders %}
+      <li class="list-group-item clearfix">
+        <span class="purpose">{{ order.purpose}}</span>
+        <span class="period">{{ order.period }}</span>
+        <span class="email">{{ order.email }}</span>
+        <span class="time">{{ order.created_date|date }}</span>
+        <span class="status">
+          {% if order.is_complete %}
+          완료됨
+          {% else %}
+          진행중
+          {% endif %}
+        </span>
       </li>
       {% endfor %}
     </ul>
-    <li class="list-group-item">
-      <span class="name">{{ order.name }}</span>
-      <span class="purpose">{{ order.purpose}}</span>
-      <span class="period">{{ order.period }}</span>
-      <span class="schedule">{{ order.schedule }}</span>
-      <span class="email">{{ order.email }}</span>
-    </li>
+    {% endif %}
   </div>
 </div>
 

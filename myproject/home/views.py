@@ -78,8 +78,6 @@ def order(request):
 def user(request):
     if request.user.is_authenticated() is False:
         return redirect('signin')
-    if request.user.is_authenticated() is True:
-        return render(request, "user.html")
     orders = Order.objects.filter(user=request.user).all()
     return render(request, "user.html", { "orders": orders })
 
